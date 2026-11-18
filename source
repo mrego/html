@@ -87613,11 +87613,11 @@ dictionary <dfn dictionary>CommandEventInit</dfn> : <span>EventInit</span> {
 
    <dd>
     <ol>
-     <li><p>Let <var>focusedElement</var> be the <span>currently focused area of a top-level
-     traversable</span>'s <span>DOM anchor</span>.</p></li>
+     <li><p>Let <var>focusedArea</var> be the <span>currently focused area of a top-level
+     traversable</span>.</p></li>
 
      <li><p>If <var>focus target</var> is a <span>shadow-including inclusive ancestor</span> of
-     <var>focusedElement</var>, then return <var>focusedElement</var>.</p></li>
+     <var>focusedArea</var>'s <span>DOM anchor</span>, then return <var>focusedArea</var>.</p></li>
 
      <li><p>Return the <span>focus delegate</span> for <var>focus target</var> given <var>focus
      trigger</var>.</p></li>
