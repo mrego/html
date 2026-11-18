@@ -88318,10 +88318,10 @@ dictionary <dfn dictionary>CommandEventInit</dfn> : <span>EventInit</span> {
     Providing the <code data-x="dom-focusoptions-preventscroll">preventScroll</code> option and
     setting it to true prevents this behavior.</p>
 
-    <p>By default, user agents use <span>implementation-defined</span> heuristics to determine
-    whether to <span>indicate focus</span> via a focus ring. Providing the <code
-    data-x="dom-focusoptions-focusvisible">focusVisible</code> option and setting it to true will
-    ensure the focus ring is always visible.</p>
+    <p>By default, if the focus moves, user agents use <span>implementation-defined</span>
+    heuristics to determine whether to <span>indicate focus</span> via a focus ring. Providing the
+    <code data-x="dom-focusoptions-focusvisible">focusVisible</code> option and setting it to true
+    will ensure the focus ring is visible when the focus moves.</p>
    </dd>
 
    <dt><code data-x=""><var>element</var>.<span subdfn data-x="dom-blur">blur</span>()</code></dt>
@@ -88435,10 +88435,11 @@ dictionary <dfn dictionary>CommandEventInit</dfn> : <span>EventInit</span> {
    <li><p>Let <var>focusUpdated</var> be the result of running the <span>focusing steps</span> for
    <span>this</span>.</p></li>
 
-   <li><p>If <var>options</var>["<dfn dict-member for="FocusOptions"><code
-   data-x="dom-focusoptions-focusvisible">focusVisible</code></dfn>"] is true, or does not <span
-   data-x="map exists">exist</span> but in an <span>implementation-defined</span> way the user agent
-   determines it would be best to do so, then <span>indicate focus</span>.</p></li>
+   <li><p>If <var>focusUpdated</var> is true, and <var>options</var>["<dfn dict-member
+   for="FocusOptions"><code data-x="dom-focusoptions-focusvisible">focusVisible</code></dfn>"] is
+   true or does not <span data-x="map exists">exist</span> but in an
+   <span>implementation-defined</span> way the user agent determines it would be best to do so,
+   then <span>indicate focus</span>.</p></li>
 
    <li><p>If <var>focusUpdated</var> is true and <var>options</var>["<dfn dict-member
    for="FocusOptions"><code data-x="dom-focusoptions-preventscroll">preventScroll</code></dfn>"] is
