@@ -88432,20 +88432,18 @@ dictionary <dfn dictionary>CommandEventInit</dfn> : <span>EventInit</span> {
    <li><p>If the <span>allow focus steps</span> given <span>this</span>'s <span>node document</span>
    return false, then return.</p></li>
 
-   <li><p>Let <var>focusUpdated</var> be the result of running the <span>focusing steps</span> for
-   <span>this</span>.</p></li>
+   <li><p>If the result of running the <span>focusing steps</span> for <span>this</span> is false,
+   then return.</p></li>
 
-   <li><p>If <var>focusUpdated</var> is true, and <var>options</var>["<dfn dict-member
-   for="FocusOptions"><code data-x="dom-focusoptions-focusvisible">focusVisible</code></dfn>"] is
-   true or does not <span data-x="map exists">exist</span> but in an
-   <span>implementation-defined</span> way the user agent determines it would be best to do so,
-   then <span>indicate focus</span>.</p></li>
+   <li><p>If <var>options</var>["<dfn dict-member for="FocusOptions"><code
+   data-x="dom-focusoptions-focusvisible">focusVisible</code></dfn>"] is true, or does not <span
+   data-x="map exists">exist</span> but in an <span>implementation-defined</span> way the user agent
+   determines it would be best to do so, then <span>indicate focus</span>.</p></li>
 
-   <li><p>If <var>focusUpdated</var> is true and <var>options</var>["<dfn dict-member
-   for="FocusOptions"><code data-x="dom-focusoptions-preventscroll">preventScroll</code></dfn>"] is
-   false, then <span>scroll a target into view</span> given <span>this</span>, "<code
-   data-x="">auto</code>", "<code data-x="">center</code>", and "<code
-   data-x="">center</code>".</p></li>
+   <li><p>If <var>options</var>["<dfn dict-member for="FocusOptions"><code
+   data-x="dom-focusoptions-preventscroll">preventScroll</code></dfn>"] is false, then <span>scroll
+   a target into view</span> given <span>this</span>, "<code data-x="">auto</code>", "<code
+   data-x="">center</code>", and "<code data-x="">center</code>".</p></li>
   </ol>
   </div>
 
